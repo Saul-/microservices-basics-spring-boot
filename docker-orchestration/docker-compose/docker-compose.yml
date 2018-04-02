@@ -1,4 +1,4 @@
-version: '2.1'
+version: '2.3'
 services:
   mysqldb:
     image: mysql:latest
@@ -16,7 +16,7 @@ services:
       MYSQL_DATABASE: auth
 
   configserver:
-    image: anilallewar/basic-config-server:0.0.1
+    image: apeixinho/basic-config-server:0.0.1
     mem_limit: 1073741824
     restart: unless-stopped
     healthcheck:
@@ -31,7 +31,7 @@ services:
         condition: service_healthy
 
   eurekaregistry:
-    image: anilallewar/basic-webservice-registry:0.0.1
+    image: apeixinho/basic-webservice-registry:0.0.1
     mem_limit: 1073741824
     restart: unless-stopped
     healthcheck:
@@ -46,7 +46,7 @@ services:
         condition: service_healthy
 
   authserver:
-    image: anilallewar/basic-auth-server:0.0.1
+    image: apeixinho/basic-auth-server:0.0.1
     mem_limit: 1073741824
     restart: unless-stopped
     ports:
@@ -56,7 +56,7 @@ services:
         condition: service_healthy
 
   apigateway:
-    image: anilallewar/basic-api-gateway:0.0.1
+    image: apeixinho/basic-api-gateway:0.0.1
     mem_limit: 1073741824
     restart: unless-stopped
     ports:
@@ -66,7 +66,7 @@ services:
         condition: service_healthy
 
   webportal:
-    image: anilallewar/basic-web-portal:0.0.1
+    image: apeixinho/basic-web-portal:0.0.1
     mem_limit: 1073741824
     restart: unless-stopped
     ports:
@@ -76,7 +76,7 @@ services:
         condition: service_healthy
 
   userwebservice:
-    image: anilallewar/basic-user-webservice:0.0.1
+    image: apeixinho/basic-user-webservice:0.0.1
     mem_limit: 1073741824
     restart: unless-stopped
     ports:
@@ -86,7 +86,7 @@ services:
         condition: service_healthy
 
   taskwebservice:
-    image: anilallewar/basic-task-webservice:0.0.1
+    image: apeixinho/basic-task-webservice:0.0.1
     mem_limit: 1073741824
     restart: unless-stopped
     ports:
@@ -96,7 +96,7 @@ services:
         condition: service_healthy
 
   commentswebservice:
-    image: anilallewar/basic-comments-webservice:0.0.1
+    image: apeixinho/basic-comments-webservice:0.0.1
     mem_limit: 1073741824
     restart: unless-stopped
     ports:
@@ -106,7 +106,7 @@ services:
         condition: service_healthy
 
   zipkinserver:
-    image: anilallewar/basic-zipkin-server:0.0.1
+    image: apeixinho/basic-zipkin-server:0.0.1
     mem_limit: 1073741824
     restart: unless-stopped
     ports:

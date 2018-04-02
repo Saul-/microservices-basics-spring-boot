@@ -11,7 +11,7 @@ apply plugin: 'maven-publish'
 
 buildscript {
 	project.ext {
-         springBootVersion = '1.5.3.RELEASE'
+         springBootVersion = '1.5.10.RELEASE'
          jarName = 'basic-comments-webservice'
          versionName = '0.0.1'
          gradleDockerVersion = '1.2'

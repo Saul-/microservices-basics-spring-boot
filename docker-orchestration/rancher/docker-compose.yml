@@ -1,4 +1,4 @@
-version: '2'
+version: '2.3'
 services:
   mysqldb:
     image: mysql:latest
@@ -14,7 +14,7 @@ services:
       io.rancher.scheduler.affinity:container_label_soft_ne: io.rancher.stack_service.name=$${stack_name}/$${service_name}
 
   configserver:
-    image: anilallewar/basic-config-server:0.0.1
+    image: apeixinho/basic-config-server:0.0.1
     mem_limit: 1073741824
     restart: unless-stopped
     ports:
@@ -29,7 +29,7 @@ services:
       io.rancher.container.pull_image: always
 
   eurekaregistry:
-    image: anilallewar/basic-webservice-registry:0.0.1
+    image: apeixinho/basic-webservice-registry:0.0.1
     mem_limit: 1073741824
     restart: unless-stopped
     ports:
@@ -44,7 +44,7 @@ services:
       io.rancher.container.pull_image: always
 
   authserver:
-    image: anilallewar/basic-auth-server:0.0.1
+    image: apeixinho/basic-auth-server:0.0.1
     mem_limit: 1073741824
     restart: unless-stopped
     ports:
@@ -59,7 +59,7 @@ services:
       io.rancher.container.pull_image: always
 
   apigateway:
-    image: anilallewar/basic-api-gateway:0.0.1
+    image: apeixinho/basic-api-gateway:0.0.1
     mem_limit: 1073741824
     restart: unless-stopped
     ports:
@@ -74,7 +74,7 @@ services:
       io.rancher.container.pull_image: always
 
   webportal:
-    image: anilallewar/basic-web-portal:0.0.1
+    image: apeixinho/basic-web-portal:0.0.1
     mem_limit: 1073741824
     restart: unless-stopped
     ports:
@@ -89,7 +89,7 @@ services:
       io.rancher.container.pull_image: always
 
   userwebservice:
-    image: anilallewar/basic-user-webservice:0.0.1
+    image: apeixinho/basic-user-webservice:0.0.1
     mem_limit: 1073741824
     restart: unless-stopped
     ports:
@@ -104,7 +104,7 @@ services:
       io.rancher.container.pull_image: always
 
   taskwebservice:
-    image: anilallewar/basic-task-webservice:0.0.1
+    image: apeixinho/basic-task-webservice:0.0.1
     mem_limit: 1073741824
     restart: unless-stopped
     ports:
@@ -119,7 +119,7 @@ services:
       io.rancher.container.pull_image: always
 
   commentswebservice:
-    image: anilallewar/basic-comments-webservice:0.0.1
+    image: apeixinho/basic-comments-webservice:0.0.1
     mem_limit: 1073741824
     restart: unless-stopped
     ports:
@@ -134,7 +134,7 @@ services:
       io.rancher.container.pull_image: always
 
   zipkinserver:
-    image: anilallewar/basic-zipkin-server:0.0.1
+    image: apeixinho/basic-zipkin-server:0.0.1
     mem_limit: 1073741824
     restart: unless-stopped
     ports:
